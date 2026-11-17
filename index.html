@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080509" />
+  <title>For My Princess ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="sparkle-layer" id="sparkles"></div>
+  <button class="sound-toggle" id="soundToggle" aria-label="Toggle music">♫ <span>Music off</span></button>
+  <audio id="bgMusic" loop preload="none">
+    <!-- Add your own royalty-free instrumental file as music.mp3 in this folder, then uncomment the source below. -->
+    <!-- <source src="music.mp3" type="audio/mpeg"> -->
+  </audio>
+
+  <main>
+    <section class="screen active" id="gateScreen">
+      <div class="eyebrow">A LITTLE WORLD, MADE JUST FOR YOU</div>
+      <h1 class="hero-title">For my <em>Princess</em></h1>
+      <p class="subline">Every fairytale begins with a little magic...</p>
+      <div class="palace-scene">
+        <div class="moon"></div><div class="castle-glow"></div>
+        <div class="castle">
+          <div class="tower tower-left"><i></i></div><div class="tower tower-right"><i></i></div>
+          <div class="main-tower"><i></i></div>
+          <div class="castle-body"><div class="window w1"></div><div class="window w2"></div><div class="door-arch"></div></div>
+        </div>
+        <div class="royal-gate">
+          <div class="gate-leaf left-leaf"><span class="gate-line"></span><span class="gate-line"></span></div>
+          <div class="gate-leaf right-leaf"><span class="gate-line"></span><span class="gate-line"></span></div>
+          <div class="heart-lock">♡<small>✦</small></div>
+        </div>
+      </div>
+      <p class="gate-caption">A kingdom is waiting for its most precious princess.</p>
+      <button class="primary-btn" id="openGate">TAP TO OPEN THE GATE <span>🤭</span></button>
+    </section>
+
+    <section class="screen" id="giftScreen">
+      <div class="eyebrow">YOU HAVE ENTERED YOUR KINGDOM</div>
+      <h2 class="section-title">GUESS, <em>WHAT'S THIS FOR?</em></h2>
+      <p class="subline">A tiny surprise, wrapped with a whole lot of love.</p>
+      <button class="gift-wrap" id="openGift" aria-label="Open the gift">
+        <span class="gift-glow"></span><span class="gift-box"><i></i><b></b><strong></strong></span>
+        <span class="gift-bow">♡</span>
+      </button>
+      <p class="hint">Psst... your surprise is waiting.</p>
+      <button class="primary-btn" id="giftButton">TAP TO OPEN THE SURPRISE <span>🤭</span></button>
+    </section>
+
+    <section class="screen" id="wishScreen">
+      <div class="firework-field" id="fireworks"></div>
+      <div class="wish-card">
+        <div class="crown">♛</div>
+        <p class="eyebrow">TODAY, THE KINGDOM CELEBRATES YOU</p>
+        <h1 class="wish-title">HAPPIESTTT<br><em>PRINCESS DAYY</em></h1>
+        <div class="name-script">SUPU💗💗</div>
+        <p class="wish-copy">May your days be as beautiful as your heart, and may life always give you reasons to smile.</p>
+        <button class="primary-btn" id="toGallery">CONTINUE <span>♡</span></button>
+      </div>
+    </section>
+
+    <section class="screen" id="galleryScreen">
+      <div class="eyebrow">A FEW MOMENTS I ADORE</div>
+      <h2 class="section-title">PRINCESS KI KHUBSURTI KI<br><em>CHOTI SI JHALAK</em></h2>
+      <p class="subline">Eight little frames. Countless reasons to smile.</p>
+      <div class="gallery">
+        <figure class="photo-card"><img src="photo1.jpg" alt="A favourite memory 1"><figcaption>That beautiful smile ♡</figcaption></figure>
+        <figure class="photo-card"><img src="photo2.jpg" alt="A favourite memory 2"><figcaption>My favourite view</figcaption></figure>
+        <figure class="photo-card"><img src="photo3.jpg" alt="A favourite memory 3"><figcaption>Pretty in every little way</figcaption></figure>
+        <figure class="photo-card"><img src="photo4.jpg" alt="A favourite memory 4"><figcaption>A moment worth keeping</figcaption></figure>
+        <figure class="photo-card"><img src="photo5.jpg" alt="A favourite memory 5"><figcaption>Simply, effortlessly you</figcaption></figure>
+        <figure class="photo-card"><img src="photo6.jpg" alt="A favourite memory 6"><figcaption>One of my happy places</figcaption></figure>
+        <figure class="photo-card"><img src="photo7.jpg" alt="A favourite memory 7"><figcaption>My pretty princess</figcaption></figure>
+        <figure class="photo-card"><img src="photo8.jpg" alt="A favourite memory 8"><figcaption>And still my favourite</figcaption></figure>
+      </div>
+      <p class="photo-note">Replace these eight images with your favourite pictures.</p>
+      <button class="primary-btn" id="toLetter">TAP TO READ MY LETTER.. <span>💌</span></button>
+    </section>
+
+    <section class="screen" id="letterScreen">
+      <div class="eyebrow">A LETTER, FROM MY HEART TO YOURS</div>
+      <h2 class="section-title">To my <em>dearest princess...</em></h2>
+      <div class="letter-paper">
+        <div class="letter-seal">♡</div>
+        <p id="typedLetter" class="typed-letter"></p>
+        <span class="letter-cursor">|</span>
+      </div>
+      <button class="primary-btn hidden" id="finalButton">ONE LAST LITTLE SURPRISE <span>✨</span></button>
+    </section>
+
+    <section class="screen" id="finalScreen">
+      <div class="final-stars"></div>
+      <div class="final-content">
+        <div class="crown">♛</div>
+        <p class="eyebrow">THE END OF THIS LITTLE FAIRYTALE...</p>
+        <h1 class="final-title">HAPPIESTTT<br><em>PRINCESS DAYY</em></h1>
+        <div class="name-script">MAHH SUPU 🤭 👑</div>
+        <p class="final-message">You deserve all the magic, all the happiness, and every beautiful thing this world can offer. Keep shining, my princess.</p>
+        <div class="signature">~ BY UR BINU</div>
+        <button class="text-btn" id="replay">REPLAY OUR LITTLE FAIRYTALE ↺</button>
+      </div>
+        <div class="heart-rain" id="heartRain"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+    </html>
+                                                                                                     
